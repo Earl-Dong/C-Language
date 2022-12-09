@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int ret = 0;
+    char password[20]={0};
+    printf("请输入密码:");
+    scanf("%s",password);
+    printf("请确认密码(Y/N):");
+    while(getchar() != '\n')
+        continue;   
+    ret = getchar();
+    if(ret == 'Y' || ret == 'y')
+        printf("确认成功\n");
+    else
+        printf("放弃确认\n");
+    return 0;
+}
+//getchar()用来接收换行符，确保能够达到意料中的输入结果
